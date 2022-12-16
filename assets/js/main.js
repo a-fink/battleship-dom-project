@@ -4,7 +4,6 @@ import ComputerBoard from './computer.js';
 // set up some global variables
 let playerBoard, computerBoard, playerUl, computerUl;
 
-// Your code here
 // once all html has been loaded set up the game
 window.addEventListener('DOMContentLoaded', event => {
     startGame();
@@ -19,10 +18,10 @@ function startGame(){
     computerBoard = new ComputerBoard(); // creates a new game board for computer player
 
     // print the two boards to the console for debugging purposes if needed
-    console.log('player');
-    console.log(playerBoard.grid);
-    console.log('computer');
-    console.log(computerBoard.grid);
+    // console.log('player');
+    // console.log(playerBoard.grid);
+    // console.log('computer');
+    // console.log(computerBoard.grid);
 
     // build & instert the ul elements for the two players
     playerUl = buildBoard(playerBoard, 'player');
@@ -169,7 +168,7 @@ function playerWins(winner){
     // call function to remove all hover li hovers
     removeAllHovers();
 
-    console.log(winner);
+    // console.log(winner);
 
     // get the div based on the winner
     let div;

@@ -1,6 +1,8 @@
 const http = require("http");
 const { readFileSync } = require("fs");
 const path = require("path");
+
+// HTTP SERVER USED DURING DEVELOPMENT / TESTING
 // Create a server using `http`
 const server = http.createServer((req, res) => {
   console.log(`Incoming Request - Method: ${req.method} | URL: ${req.url}`);
@@ -11,7 +13,7 @@ const server = http.createServer((req, res) => {
   });
   // When the request is finished processing the entire body
   req.on("end", () => {
-    // Parsing the body of the request
+    // Parse the body of the request
     if (reqBody) {
       req.body = reqBody
         .split("&")
